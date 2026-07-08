@@ -14,28 +14,33 @@ export default async function AdminLayout({
 
   return (
     <div className="min-h-screen">
-      <header className="border-b border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+      <header className="border-b border-black/30 bg-gray-900 text-gray-100">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <nav className="flex items-center gap-6 text-sm">
-            <span className="font-semibold">Admin · Modesto Growth</span>
-            <Link href="/admin" className="text-gray-600 hover:text-gray-900">
+            <span className="font-semibold tracking-tight text-white">
+              Modesto Growth <span className="text-indigo-400">· Admin</span>
+            </span>
+            <Link
+              href="/admin"
+              className="text-gray-300 transition-colors hover:text-white"
+            >
               Dashboard
             </Link>
             <Link
               href="/admin/clients"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-300 transition-colors hover:text-white"
             >
               Clientes
             </Link>
             <Link
               href="/admin/documents"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-300 transition-colors hover:text-white"
             >
               Entregas
             </Link>
           </nav>
           <form action={signOut}>
-            <button className="text-sm text-gray-500 hover:text-gray-900">
+            <button className="text-sm text-gray-400 transition-colors hover:text-white">
               Sair
             </button>
           </form>
