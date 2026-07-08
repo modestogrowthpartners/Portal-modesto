@@ -9,16 +9,17 @@ export default async function PortalLayout({
 }) {
   const profile = await getProfile();
   if (!profile) redirect("/login");
-  // Admin usa a área /admin.
   if (profile.role === "admin") redirect("/admin");
 
   return (
     <div className="min-h-screen">
-      <header className="border-b border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-3">
-          <span className="font-semibold">Modesto Growth · Portal</span>
+      <header className="border-b border-black/30 bg-gray-900 text-gray-100">
+        <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
+          <span className="font-semibold tracking-tight text-white">
+            Modesto Growth <span className="text-indigo-400">· Portal</span>
+          </span>
           <form action={signOut}>
-            <button className="text-sm text-gray-500 hover:text-gray-900">
+            <button className="text-sm text-gray-400 transition-colors hover:text-white">
               Sair
             </button>
           </form>
