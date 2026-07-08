@@ -1,8 +1,9 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
+type CookieToSet = { name: string; value: string; options?: any };
+
 // Client para Server Components, Server Actions e Route Handlers.
-// Usa a sessão do usuário -> RLS é aplicada normalmente.
 export async function createClient() {
   const cookieStore = await cookies();
 
@@ -14,14 +15,13 @@ export async function createClient() {
         getAll() {
           return cookieStore.getAll();
         },
-        setAll(cookiesToSet) {
+        setAll(cookiesToSet: CookieToSet[]) {
           try {
             cookiesToSet.forEach(({ name, value, options }) =>
               cookieStore.set(name, value, options)
             );
           } catch {
-            // Chamado de um Server Component: ignorável, o middleware
-            // cuida de renovar a sessão.
+            // Chamado de um Server Component: o middleware renova a sessão.
           }
         },
       },
