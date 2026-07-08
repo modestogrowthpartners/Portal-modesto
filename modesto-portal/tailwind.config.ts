@@ -5,35 +5,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Identidade Modesto
         brand: {
-          ink: "#1A1A18",     // carvão quente da marca
-          paper: "#F5F3EE",   // papel/bone
-          gold: "#A8823C",    // acento opcional (ver nota)
+          ink: "#1A1A18",
+          paper: "#EDE8DE",
+          gold: "#A8823C",
         },
-        // Neutros quentes (substitui o cinza frio padrão)
         gray: {
-          50: "#F5F3EE",
-          100: "#ECE8E0",
-          200: "#E0DACE",
-          300: "#CDC5B5",
-          400: "#A69D8B",
-          500: "#7C7565",
-          600: "#585247",
-          700: "#3D382F",
-          800: "#292520",
+          50: "#EDE8DE",
+          100: "#E4DED2",
+          200: "#D8D1C2",
+          300: "#C6BDA9",
+          400: "#A39A86",
+          500: "#79715F",
+          600: "#554E42",
+          700: "#3B362D",
+          800: "#29241E",
           900: "#1A1A18",
           950: "#100F0D",
         },
-        // Ação primária -> carvão (no lugar do índigo)
         indigo: {
-          400: "#6B6252",
-          500: "#4A4339",
-          600: "#24211A",
-          700: "#15130F",
-          800: "#0C0B09",
+          400: "#C9A24E",
+          500: "#B4893A",
+          600: "#96701F",
+          700: "#785819",
+          800: "#5E4514",
         },
-        // Erros -> tijolo contido
         red: {
           500: "#B04A3E",
           600: "#9C3A30",
